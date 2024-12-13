@@ -123,6 +123,7 @@ private void loadComboBuku() {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jumlahBukuField1 = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,6 +155,13 @@ private void loadComboBuku() {
         jLabel3.setText("Pelanggan");
 
         jLabel5.setText("Total Harga");
+
+        jButton5.setText("Kembali Ke Menu Utama");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,7 +195,9 @@ private void loadComboBuku() {
                                         .addComponent(jButton2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton4)
-                                        .addGap(0, 307, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton5)
+                                        .addGap(0, 124, Short.MAX_VALUE))
                                     .addComponent(jumlahBukuField))))))
                 .addGap(170, 170, 170))
         );
@@ -215,7 +225,8 @@ private void loadComboBuku() {
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton4))
+                    .addComponent(jButton4)
+                    .addComponent(jButton5))
                 .addContainerGap(290, Short.MAX_VALUE))
         );
 
@@ -323,6 +334,12 @@ private void loadComboBuku() {
     }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        UtamaFrame utamaFrame = new UtamaFrame();
+        utamaFrame.setVisible(true);
+        dispose(); // Tutup frame transaksi
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -363,6 +380,7 @@ private void loadComboBuku() {
     private javax.swing.JComboBox<String> cmbPelanggan;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
