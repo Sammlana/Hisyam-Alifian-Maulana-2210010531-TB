@@ -234,7 +234,7 @@ public class PelangganFrame extends javax.swing.JFrame {
             int id = (int) tabelPelanggan.getValueAt(selectedRow, 0); // Ambil ID dari tabel
 
             try (Connection conn = DatabaseConnection.getConnection()) {
-                String query = "UPDATE buku SET nama_pelanggan = ?, alamat = ?, telepon = ? WHERE id_pelanggan = ?";
+                String query = "UPDATE pelanggan SET nama_pelanggan = ?, alamat = ?, telepon = ? WHERE id_pelanggan = ?";
                 PreparedStatement ps = conn.prepareStatement(query);
                 ps.setString(1, nama);
                 ps.setString(2, alamat);
